@@ -39,24 +39,48 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
 -   [ ] Mention two parts of Express that you learned about this week.
+        Express makes it so you can work with routs so you can break to project up into
+        folders.
+        Express makes use of Middleware easily as it is built into the framework
 
 -   [ ] Describe Middleware?
-
+        Middleware are functions that get executed in the order that they come up in the server code. You may want to write up a middleware function to keep your code "dry"
 -   [ ] Describe a Resource?
 
 -   [ ] What can the API return to help clients know if a request was successful?
 
 -   [ ] How can we partition our application into sub-applications?
 
+1. The core features of Node.js and Express and why they are useful.
+    In Express it is useful to use routes because it will break up your project folders so you will not have a massive server.js file.
+
+    The use of Middleware that is built into Express is amazing. I learned about the middleware Helmet, this is nice because it adds a lair of security on your server.
+
+2. Understand and explain the use of Middleware.
+    Middleware are functions that get executed in the order that they come up in the server code. You may want to write up a middleware function to keep your code "dry"
+
+3. The basic principles of the REST architectural style.
+    Everything is a resource
+    each resource is accessible via a unique URL
+    resources can have multiple representations
+    communication happens over a stateless protocol
+    resource management happens via HTTP methods
+
+4. Understand and explain the use of Express Routers.
+    The Express Routes clean up your code. In a normal node app all the code pretty much stays in the server js file. With the use of Express you can clean up your code and move each start of an end point (ie /users, /projects) to its own folder and file. You can even do this with middleware and call it from a different folder.
+
+5. Describe tooling used to manually test the correctness of an API.
+    I use insomnia this tool is pretty nice you can set up multiple enviroments for different projects. You just need to create the end point to get the data. Then it will ask for the url and you just have to paste it in. If the end point works you can hit send and see the data on the right hand side.
+
 ## Minimum Viable Product
 
 -   [x] Configure an _npm script_ named _"server"_ that will execute your code using _nodemon_. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
--   [ ] Configure an _npm script_ named _"start"_ that will execute your code using _node_.
+-   [x] Configure an _npm script_ named _"start"_ that will execute your code using _node_.
 
 Design and build the necessary endpoints to:
 
--   [ ] Perform CRUD operations on _projects_ and _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
--   [ ] Retrieve the list of actions for a project.
+-   [x] Perform CRUD operations on _projects_ and _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
+-   [x] Retrieve the list of actions for a project.
 
 Please read the following sections before implementing the Minimum Viable Product, they describe how the database is structured and the files and methods available for interacting with the data.
 
